@@ -1,0 +1,82 @@
+﻿@model MVC_WEBApplication.Models.phone
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>phone</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Model_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Model_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Launch)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Launch)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Camera)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Camera)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ram)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ram)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Battery)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Battery)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Network)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Network)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.weight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.weight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Memory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Memory)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Brand_Name }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

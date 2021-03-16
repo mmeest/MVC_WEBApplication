@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MobileModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="phone">
+          <Key>
+            <PropertyRef Name="Brand_Name" />
+          </Key>
+          <Property Name="Brand_Name" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Model_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Launch" Type="date" />
+          <Property Name="Camera" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ram" Type="nvarchar" MaxLength="50" />
+          <Property Name="Battery" Type="nvarchar" MaxLength="50" />
+          <Property Name="Network" Type="nvarchar" MaxLength="50" />
+          <Property Name="weight" Type="nvarchar" MaxLength="50" />
+          <Property Name="Memory" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="MobileModelStoreContainer">
+          <EntitySet Name="phone" EntityType="Self.phone" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MobileModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="phone">
+          <Key>
+            <PropertyRef Name="Brand_Name" />
+          </Key>
+          <Property Name="Brand_Name" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Model_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Launch" Type="DateTime" Precision="0" />
+          <Property Name="Camera" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ram" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Battery" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Network" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="weight" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Memory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="MobileEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="phones" EntityType="Self.phone" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MobileModelStoreContainer" CdmEntityContainer="MobileEntities">
+          <EntitySetMapping Name="phones">
+            <EntityTypeMapping TypeName="MobileModel.phone">
+              <MappingFragment StoreEntitySet="phone">
+                <ScalarProperty Name="Brand_Name" ColumnName="Brand_Name" />
+                <ScalarProperty Name="Model_Name" ColumnName="Model_Name" />
+                <ScalarProperty Name="Launch" ColumnName="Launch" />
+                <ScalarProperty Name="Camera" ColumnName="Camera" />
+                <ScalarProperty Name="Ram" ColumnName="Ram" />
+                <ScalarProperty Name="Battery" ColumnName="Battery" />
+                <ScalarProperty Name="Network" ColumnName="Network" />
+                <ScalarProperty Name="weight" ColumnName="weight" />
+                <ScalarProperty Name="Memory" ColumnName="Memory" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
