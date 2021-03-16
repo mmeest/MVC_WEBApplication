@@ -7,19 +7,21 @@
     <p>ASP.NET MVC CRUD Web Application</p>
 </h3>
 
-<img src="list.png" width="300px">
+## List of items:
 
-## List of items
+<p align="center"><img src="list.png" width="300px"></p>
 
-<img src="add.png" width="300px">
+## Create item:
 
-## Add item
+<p align="center"><img src="create.png" width="300px"></p>
 
-<img src="edit.png" width="300px">
+## Edit item:
 
-## Add item
+<p align="center"><img src="edit.png" width="300px"></p>
 
-<img src="delete.png" width="300px">
+## Delete item:
+
+<p align="center"><img src="delete.png" width="300px"></p>
 
 ## Delete item
 
