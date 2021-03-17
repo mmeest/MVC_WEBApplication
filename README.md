@@ -58,7 +58,7 @@ In Visual Studio we'll create new 'ASP.NET Web Application' with MVC
 In 'Models' we create connecttion to database by adding 'ADO.NET Entity Data Model'\
 We'll copy server name and database name from Server Manager to our connection.
 
-<img src="https://user-images.githubusercontent.com/34022590/111438705-3ba62180-870d-11eb-947f-dd3842c45156.png">
+<img src="https://user-images.githubusercontent.com/34022590/111438995-8f186f80-870d-11eb-860e-d659e88bb4c5.jpg">
 
 AlertifyJS  - https://alertifyjs.com/ \
 AlertifyJS not only provides a replacement for default browser dialogs, it makes it super easy to create your own! 
