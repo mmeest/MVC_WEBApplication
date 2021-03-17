@@ -7,26 +7,36 @@
     <p>ASP.NET MVC CRUD Web Application</p>
 </h3>
 
-## List of items:
+## Contents
+- [Screens](#screens)
+- [Tools needed](#tools-needed)
+- [Database](#database)
+- [Creating Project](#creating-project)
+
+## Screens
+
+### List of items:
 
 <p align="center"><img src="list.png" width="300px"></p>
 
-## Create item:
+### Create item:
 
 <p align="center"><img src="create.png" width="300px"></p>
 
-## Edit item:
+### Edit item:
 
 <p align="center"><img src="edit.png" width="300px"></p>
 
-## Delete item:
+### Delete item:
 
 <p align="center"><img src="delete.png" width="300px"></p>
 
-## Delete item
-
+## Tools needed
+* Visual Studio           - https://visualstudio.microsoft.com/
+* Microsoft SQL Server    - https://www.microsoft.com/en-us/sql-server/sql-server-downloads
 
 ## Database
+In Microsof SQL Server Management Studio we'll create the database\
 DB Name:  'Mobile'\
 Table Name: 'phone'\
 Columns:
@@ -41,3 +51,22 @@ Columns:
 | Network | navchar(50) | null |
 | weight | navchar(50) | null |
 | Memory | navchar(50) | null |
+
+## Creating project
+In Visual Studio we'll create new 'ASP.NET Web Application' with MVC
+
+In 'Models' we create connecttion to database by adding 'ADO.NET Entity Data Model'\
+We'll copy server name and database name from Server Manager to our connection.
+
+AlertifyJS  - https://alertifyjs.com/ \
+AlertifyJS not only provides a replacement for default browser dialogs, it makes it super easy to create your own! 
+
+We will add 'Alertify' package to our project with NuGet\
+and connect alertify and bootstrap to our '_Layout.cshtml'
+
+In 'RouteConfig.cs' we will configure our main page route
+```
+defaults: new { controller = "phone", action = "Index", id = UrlParameter.Optional }
+```
+
+# HAPPY CODING !!! :)
